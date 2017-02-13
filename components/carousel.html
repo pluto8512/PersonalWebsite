@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+    <title>bootStrap轮播图</title>
+    <link href="../lib/node_modules/.3.3.7@bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <script src="../lib/node_modules/.3.7.3@html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../lib/respond/respond.js"></script>
+    <![endif]-->
+    <!-- my css B! -->
+    <link rel="stylesheet" href="css/index.css"/>
+    <!-- my css E! -->
+    <style>
+        #carousel-example-generic {
+            width: 100%;
+            height: 410px;
+        }
+        .item {
+            position: relative;
+            -webkit-transition: .6s ease-in-out left;
+            -o-transition: .6s ease-in-out left;
+            transition: .6s ease-in-out left;
+            width: 100%;
+            height: 410px;
+        }
+        #carousel-example-generic .item:nth-child(1){
+            width: 100%;
+            height: 400px;
+            background: #000;
+            opacity: 0.2;
+        }
+        #carousel-example-generic .item:nth-child(2){
+            width: 100%;
+            height: 400px;
+            background: pink;
+        }
+        #carousel-example-generic .item:nth-child(3){
+            width: 100%;
+            height: 400px;
+            background: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 轮播图组件，必须声明：class="carousel" data-ride="carousel" -->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- 小圆点
+             data-target：每个小圆点对应控制的容器
+             data-slide-to：指明具体控制的容器里面的具体内容
+        -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- 轮播的具体内容-->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="carousel-caption">
+                    <p>魏晓东</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="carousel-caption">
+                    <p>南华大学</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="carousel-caption">
+                    <p>软件工程专业</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 箭头
+             href 指定要控制的容器
+             data-slide 指定这个箭头附带的功能
+        -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+<!-- js B! -->
+<!--bootstrap依赖jquery 引用jquery文件-->
+<script src="../lib/node_modules/.3.1.1@jquery/dist/jquery.js"></script>
+<!--Bootstrap 核心js文件-->
+<script src="../lib/node_modules/.3.3.7@bootstrap/dist/js/bootstrap.js"></script>
+<!-- js E! -->
+</body>
+</html>

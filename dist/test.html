@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style lang="" type="text/css">
+        body{
+            background: blue;
+        }
+        .father {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            background: #000;
+            z-index: 100;
+        }
+        .son {
+            position: relative;
+            margin-top: -25px;
+            width: 50px;
+            height: 50px;
+            background: red;
+        }
+    </style>
+    <link rel="stylesheet" href="./lib/node_modules/fullpage/build/fullpage.css"/>
+</head>
+<!--我是注释-->
+<body>
+
+    <div id="sectionContent" class="fp-section-content">
+        <div class="fp-section">1</div>
+        <div class="fp-section">2</div>
+        <div class="fp-section">3</div>
+    </div>
+
+<script src="./lib/node_modules/fullpage/build/fullpage.min.js"></script>
+<script>
+    fullpage.init('#sectionContent');
+</script>
+</body>
+</html>

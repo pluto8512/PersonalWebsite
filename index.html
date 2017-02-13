@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <!-- 申明IE浏览器需要用最新的渲染引擎来渲染当前的页面 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 视口 只有移动端才识别 申明了申明？ -->
+    <!-- width 申明视口的宽度等于设备的宽度 -->
+    <!-- initial-scale 申明的是 默认的初始缩放比 1：1 也就是等比显示在移动端 -->
+    <!-- user-scalable 不允许用户自行缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+    <title>博客</title>
+    <!-- Bootstrap 核心css文件 -->
+    <link href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 在不支持html5标签的浏览器 和不支持media查询的浏览器 我们使用的是下面两个js插件来做兼容 -->
+    <!-- 有条件注释  在ie9以下的版本浏览器 才使用下面两个js文件 -->
+    <!-- 注意  要在http形式下打开 页面 才能正常使用下面两个文件 -->
+    <!--[if lt IE 9]>
+    <script src="lib/node_modules/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="lib/respond/respond.js"></script>
+    <![endif]-->
+    <!-- my css B! -->
+    <link rel="stylesheet" href="css/index.css"/>
+    <!-- my css E! -->
+    <link rel="shortcut icon" href="./images/favicon.ico">
+</head>
+<body>
+    <!-- 个站头部 B！ -->
+    <!--<header class="header hidden-sm hidden-xs ">-->
+        <!--<div class="container">-->
+            <!--<div class="contact row">-->
+                <!--<div class="weChat col-md-2">-->
+                    <!--<a href="javascript:;" class="weChatA">-->
+                        <!--<i class="icon tumi">&#xe601;</i>-->
+                        <!--<p>微信公众号</p>-->
+                        <!--<i class="icon tumi">&#xe641;</i>-->
+                        <!--<img src="images/tumi_weChat.jpg" alt="">-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--<div class="col-md-5">-->
+                    <!--<i class="icon tumi">&#xe62b;</i>-->
+                    <!--<p>15211436389(&nbsp;接听时间&nbsp;9:00-21:00&nbsp;)</p>-->
+                <!--</div>-->
+                <!--<div class="col-md-2">-->
+                    <!--<p>常见问题</p>-->
+                <!--</div>-->
+                <!--<div class="col-md-3">-->
+                    <!--<a title="123" type="button" class="btn tumi-Blogin">后台登陆</a>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</header>-->
+    <!-- 个站头部 E!-->
+    <!-- 导航栏 B！-->
+    <!--导航条  navbar-default:默认样式的导航条-->
+    <nav class="navbar navbar-tumi">
+        <!--container:响应式布局容器-->
+        <div class="container">
+            <!--这个模块  在移动端显示的样式-->
+            <div class="navbar-header">
+                <!--汉堡菜单-->
+                <!--
+                    data-toggle 指定的是组件的名称（当你申明了这个属性为collapse js组件的时候，就告诉bootstrap这是一个手风琴菜单组件，说明给这个按钮添加了手风琴的效果）
+                    data-target 指定这个按钮要控制的显示和隐藏的那个盒子（可以通过 class  也可以通过ID）
+                -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <!--按钮的显示效果-->
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--显示logo-->
+                <a class="navbar-brand" href="#">
+                    <i class="icon tumi-logo">&#xe60f;Tumi</i>
+                </a>
+            </div>
+
+            <!-- 导航条内容容器，在pc端的样式 -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#evaluate">个人评价</a></li>
+                    <li><a href="#demo">案例展示</a></li>
+                    <li><a href="#skill">职业技能</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">个人中心</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!-- 导航栏 E！-->
+    <!-- 轮播图 B！-->
+    <!-- 轮播图组件，必须声明：class="carousel" data-ride="carousel" -->
+    <!-- pc端-->
+    <div class="carousel-tumi clearfix">
+        <div class="container-fluid">
+            <div id="carousel-example-generic" class="carousel slide hidden-sm hidden-xs" data-ride="carousel">
+                <!-- 小圆点
+                     data-target：每个小圆点对应控制的容器
+                     data-slide-to：指明具体控制的容器里面的具体内容
+                -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+                <!-- 轮播的具体内容-->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <div class="carousel-caption">
+                            <h1>Xiaodong's Personal Website</h1>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h1>it's my whole life!</h1>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h1>Welcome to Me!</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 移动端-->
+            <div id="carousel-example-generic2" class="hidden-md hidden-lg ">
+                <img id="img_mobile" src="./images/head-background-mobile.jpg" alt=""/>
+                <div class="mask "></div>
+            </div>
+        </div>
+    </div>
+    <!-- 轮播图 E！-->
+    <!-- 展示部分 Begin!-->
+    <div class="show ">
+        <!-- 个人评价展示信息 Begin！-->
+        <a name="evaluate"></a>
+        <div class="container">
+            <div class="row evaluate">
+                <div class="msg-show msg-show-title col-lg-12 col-md-12 col-sm-12 col-xm-12">
+                    <sapn ><h1><i class="icon tumi-logo">&#xe620;</i>个人评价</h1></sapn>
+                    <span class="line"></span>
+                </div>
+                <div class="msg-show col-lg-3 col-md-3 col-sm-6 col-xm-12">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon tumi-logo">&#xe665;</i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"></h4>
+                            <p>全心全意投入到前端事业</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg-show col-lg-3 col-md-3 col-sm-6 col-xm-12">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon tumi-logo">&#xe665;</i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"></h4>
+                            <p>有项目经验,了解WEB开发工作流程</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg-show col-lg-3 col-md-3 col-sm-6 col-xm-12">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon tumi-logo">&#xe665;</i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"></h4>
+                            <p>熟悉掌握全面的开发技术和常见业务处理</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg-show col-lg-3 col-md-3 col-sm-6 col-xm-12">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon tumi-logo">&#xe665;</i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"></h4>
+                            <p>熟悉后端工作流程，擅长数据交互处理</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg-show col-lg-3 col-md-3 col-sm-6 col-xm-12">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon tumi-logo">&#xe665;</i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"></h4>
+                            <p>学习能力强,思考敏捷,有恒负责,热情乐群</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg-show col-lg-3 col-md-3 col-sm-6 col-xm-12">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon tumi-logo">&#xe665;</i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"></h4>
+                            <p>能阅读技术文档，技术书籍等英文资料</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg-show col-lg-3 col-md-3 col-sm-6 col-xm-12">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon tumi-logo">&#xe665;</i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"></h4>
+                            <p>爱技术，自学能力强，解决问题能力强</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg-show col-lg-3 col-md-3 col-sm-6 col-xm-12">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon tumi-logo">&#xe665;</i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"></h4>
+                            <p>最爱前端开发，最爱JavaScript</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 展示信息 End！-->
+        <!-- 案例展示 Begin！-->
+        <a name="demo"></a>
+        <div class="tumi-demo">
+        <div class="container-fluid">
+                <!--标签页的控制区块-->
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs-tumi" role="tablist">
+                    <!--
+                    a href 指明当前控制的是哪个内容容器 ID class
+                    data-toggle="tab" 必须声明
+                    -->
+                    <li role="presentation"  class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+                </ul>
+                <!--标签页  的内容区块-->
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                       <div class="container">
+                           <div class="row">
+                               <div class="test col-lg-6 col-md-6 col-sm-6 col-xm-12"></div>
+                               <div class="test2 col-lg-6 col-md-6 col-sm-6 hidden-xs">
+                                   <div class="media">
+                                       <div class="media-left">
+                                           <i class="icon tumi-num">&#xe604;</i>
+                                       </div>
+                                       <div class="media-body">
+                                           <h4 class="media-heading">项目名称</h4>
+                                           <p>游长沙</p>
+                                       </div>
+                                   </div>
+                                   <div class="media">
+                                       <div class="media-left">
+                                           <i class="icon tumi-num">&#xe605;</i>
+                                       </div>
+                                       <div class="media-body">
+                                           <h4 class="media-heading">项目介绍</h4>
+                                           <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                           </p>
+                                       </div>
+                                   </div>
+                                   <div class="media">
+                                       <div class="media-left">
+                                           <i class="icon tumi-num">&#xe606;</i>
+                                       </div>
+                                       <div class="media-body">
+                                           <h4 class="media-heading">项目描述</h4>
+                                           <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                           </p>
+                                       </div>
+                                   </div>
+                                   <div class="media">
+                                       <div class="media-left">
+                                           <i class="icon tumi-num">&#xe740;</i>
+                                       </div>
+                                       <div class="media-body">
+                                           <h4 class="media-heading">在线预览</h4>
+                                           <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                           </p>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="test3 hidden-lg hidden-md hidden-sm">
+                                   <div class="media">
+                                       <div class="media-left">
+                                           <i class="icon tumi-num">&#xe604;</i>
+                                       </div>
+                                       <div class="media-body">
+                                           <h4 class="media-heading">项目名称</h4>
+                                           <p>游长沙</p>
+                                       </div>
+                                   </div>
+                                   <div class="media">
+                                       <div class="media-left">
+                                           <i class="icon tumi-num">&#xe605;</i>
+                                       </div>
+                                       <div class="media-body">
+                                           <h4 class="media-heading">项目介绍</h4>
+                                           <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                           </p>
+                                       </div>
+                                   </div>
+                                   <div class="media">
+                                       <div class="media-left">
+                                           <i class="icon tumi-num">&#xe606;</i>
+                                       </div>
+                                       <div class="media-body">
+                                           <h4 class="media-heading">项目描述</h4>
+                                           <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                           </p>
+                                       </div>
+                                   </div>
+                                   <div class="media">
+                                       <div class="media-left">
+                                           <i class="icon tumi-num">&#xe740;</i>
+                                       </div>
+                                       <div class="media-body">
+                                           <h4 class="media-heading">在线预览</h4>
+                                           <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                           </p>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                        <div class="container">
+                            <div class="row">
+                                <div class="test col-lg-6 col-md-6 col-sm-6 col-xm-12"></div>
+                                <div class="test2 col-lg-6 col-md-6 col-sm-6 hidden-xs">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe604;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">项目名称</h4>
+                                            <p>游长沙</p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe605;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">项目介绍</h4>
+                                            <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe606;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">项目描述</h4>
+                                            <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe740;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">在线预览</h4>
+                                            <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="test3 hidden-lg hidden-md hidden-sm">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe604;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">项目名称</h4>
+                                            <p>游长沙</p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe605;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">项目介绍</h4>
+                                            <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe606;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">项目描述</h4>
+                                            <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe740;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">在线预览</h4>
+                                            <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="messages">
+                        <div class="container">
+                            <div class="row">
+                                <div class="test col-lg-6 col-md-6 col-sm-6 col-xm-12"></div>
+                                <div class="test2 col-lg-6 col-md-6 col-sm-6 hidden-xs">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe604;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">项目名称</h4>
+                                            <p>游长沙</p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe605;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">项目介绍</h4>
+                                            <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe606;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">项目描述</h4>
+                                            <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe740;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">在线预览</h4>
+                                            <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="test3 hidden-lg hidden-md hidden-sm">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe604;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">项目名称</h4>
+                                            <p>游长沙</p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe605;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">项目介绍</h4>
+                                            <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe606;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">项目描述</h4>
+                                            <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe740;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">在线预览</h4>
+                                            <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="settings">
+                        <div class="container">
+                            <div class="row">
+                                <div class="test col-lg-6 col-md-6 col-sm-6 col-xm-12"></div>
+                                <div class="test2 col-lg-6 col-md-6 col-sm-6 hidden-xs">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe604;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">项目名称</h4>
+                                            <p>游长沙</p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe605;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">项目介绍</h4>
+                                            <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe606;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">项目描述</h4>
+                                            <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe740;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">在线预览</h4>
+                                            <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="test3 hidden-lg hidden-md hidden-sm">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe604;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">项目名称</h4>
+                                            <p>游长沙</p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe605;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">项目介绍</h4>
+                                            <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe606;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">项目描述</h4>
+                                            <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="icon tumi-num">&#xe740;</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">在线预览</h4>
+                                            <p>一个手机移动端项目，一个手机移动端项目，一个手机移动端项目
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+        <!-- 案例展示 End！-->
+        <!-- 座右铭 Begin！-->
+        <div class="motto">
+            <div class="container-fluid">
+                <div class="container-fluid">
+                    <img class="hidden-xs hidden-sm" src="./images/fans.jpg" alt=""/>
+                </div>
+                <div class="container-fluid">
+                    <img class="hidden-md hidden-lg" src="./images/fans_mobile.jpg" alt=""/>
+                </div>
+            </div>
+        </div>
+        <!-- 座右铭 End！-->
+        <!-- 职业技能展示信息 Begin！-->
+        <a name="skill"></a>
+        <div class="container">
+            <div class="row skill">
+                <div class="msg-show msg-show-title col-lg-12 col-md-12 col-sm-12 col-xm-12">
+                    <sapn ><h1><i class="icon tumi-logo">&#xe62a;</i>职业技能</h1></sapn>
+                    <span class="line"></span>
+                </div>
+                <div class="msg-show col-lg-3 col-md-3 col-sm-6 col-xm-12">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon tumi-logo">&#xe622;</i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"></h4>
+                            <p>掌握ajax，artTemplete,实现页面数据的异步加载</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg-show col-lg-3 col-md-3 col-sm-6 col-xm-12">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon tumi-logo">&#xe73b;</i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"></h4>
+                            <p>掌握h5c3新特性，熟悉rem布局,能快速开发适配移动端的网页</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg-show col-lg-3 col-md-3 col-sm-6 col-xm-12">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon tumi-logo">&#xe773;</i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"></h4>
+                            <p>熟练DIV+CSS布局和sass/les,快速精确还原设计图，写出符合W3C标准可以兼容主流的浏览器的页面</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg-show col-lg-3 col-md-3 col-sm-6 col-xm-12">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon tumi-logo">&#xe609;</i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"></h4>
+                            <p>熟练JavaScript,熟悉Javascript原型链继承机制和面向对象思想，可以用原生JS代码编写常见的功能和网页特效</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg-show col-lg-3 col-md-3 col-sm-6 col-xm-12">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon tumi-logo">&#xe602;</i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"></h4>
+                            <p>熟练jQuery+Bootstrap,实现响应式网站的快速开发</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg-show col-lg-3 col-md-3 col-sm-6 col-xm-12">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon tumi-logo">&#xe741;</i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"></h4>
+                            <p>熟练git+gulp+npm,实现代码版本管理，代码合并压缩和项目第三方包管理</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg-show col-lg-3 col-md-3 col-sm-6 col-xm-12">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon tumi-logo">&#xe619;</i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"></h4>
+                            <p>熟悉angularJS和模块化开发,能使用mvc前端框架以及jQuery+seajs模块化开发</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg-show col-lg-3 col-md-3 col-sm-6 col-xm-12">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon tumi-logo">&#xe640;</i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"></h4>
+                            <p>了解java,ssm(spring+springMvc+mybatis),es6,php,android开发</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 展示信息 End！-->
+        <!-- 座右铭 Begin！-->
+        <div class="motto map">
+            <div class="container-fluid">
+                <img class="hidden-xs hidden-sm" src="./images/map.png" alt=""/>
+            </div>
+            <div class="container-fluid">
+                <img class="hidden-md hidden-lg" src="./images/map2.png" alt=""/>
+            </div>
+        </div>
+        <!-- 座右铭 End！-->
+        <!-- 联系我 Begin!-->
+        <div class="container link-me clearfix">
+            <div class="row">
+                <div class="msg-show col-lg-12 col-md-12 col-sm-12 col-xm-12">
+                    <sapn ><h1><i class="icon tumi-logo">&#xe616;</i> Link Me</h1></sapn>
+                    <span class="line"></span>
+                </div>
+                <div class="msg-show">
+                    <div class="media">
+                        <div class="media-left hidden-xs">
+                            <img src="./images/me.png" alt="我的卡通形象"/>
+                        </div>
+                        <div class="media-body">
+                            <!-- 输入框组-->
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">name</span>
+                                <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon2">email</span>
+                                <input type="text" class="form-control" placeholder="email" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon3">message</span>
+                                <input type="text" class="form-control" placeholder="message" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-submit">
+                                <div class="icon">
+                                    <i class="icon tumi-submit">&#xe610;</i>
+                                </div>
+                                <div class="body">
+                                    <a title="提交按钮" type="button" class="btn tumi-Blogin">Send messasge</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- 底部 B！-->
+                <footer class="link-footer hidden-xs hidden-sm"></footer>
+                <!-- 移动端显示-->
+                <!--<footer class="link-footer-mobile hidden-md hidden-lg"></footer>-->
+                <!-- 底部 E！-->
+            </div>
+        </div>
+        <!-- 联系我 End!-->
+        <!-- 底部 B！-->
+        <footer class="footer container-fluid hidden-sm hidden-xs">
+            <p>&copy;xiaodong</p>
+        </footer>
+        <!-- 底部 E！-->
+    </div>
+    <!-- 展示部分 End！-->
+    <!-- 模板 B!-->
+    <!--点盒子内容模板-->
+    <!--model  是一个  数组 模板当中运行的也是js 包裹在<%%>才会被执行-->
+    <script type="text/template" id="template_point">
+        <%_.each(model,function(item,i){%>
+        <li data-target="#carousel-example-generic" data-slide-to="<%=i%>" class="<%=i==0?'active':''%>"></li>
+        <%});%>
+    </script>
+    <!--图片内容模板 -->
+    <!--除了 图片数据  我们还需要传入一个 是不是移动端的数据-->
+    <script type="text/template" id="template_item">
+        <img src="<%=item.img%>" alt=""/>
+    </script>
+    <!-- 模板 E!-->
+
+
+
+    <!-- js B! -->
+    <!--bootstrap依赖jquery 引用jquery文件-->
+    <script src="lib/node_modules/jquery/dist/jquery.min.js"></script>
+    <!--Bootstrap 核心js文件-->
+    <script src="lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- 首页的js-->
+    <script src="./lib/node_modules/fullpage/build/fullpage.min.js"></script>
+    <script src="js/index.js"></script>
+    <!-- js E! -->
+</body>
+</html>

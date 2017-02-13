@@ -1,0 +1,1 @@
+!function(){$(document).ready(function(){$("#carousel-example-generic2").css("height",$("#img_mobile").css("height")),$(window).resize(function(){$("#carousel-example-generic2").css("height",$("#img_mobile").css("height"))})})}();
