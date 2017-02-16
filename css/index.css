@@ -292,6 +292,8 @@ fieldset[disabled] .navbar-tumi .btn-link:focus {
 
 .tumi-demo {
   margin-top: 0px; }
+  .tumi-demo .tumi_product_tabsParent {
+    overflow: hidden; }
   .tumi-demo .tab-pane {
     width: 100%; }
     .tumi-demo .tab-pane .test {
@@ -308,7 +310,7 @@ fieldset[disabled] .navbar-tumi .btn-link:focus {
     .tumi-demo .tab-pane .test3 {
       color: white;
       font-size: 12px;
-      padding-left: 30px; }
+      padding: 0px 30px; }
       .tumi-demo .tab-pane .test3 h4 {
         font-size: 12px; }
   .tumi-demo .nav > li > a {
@@ -397,17 +399,26 @@ fieldset[disabled] .navbar-tumi .btn-link:focus {
   .nav-tabs-tumi.nav-justified > .active > a:hover,
   .nav-tabs-tumi.nav-justified > .active > a:focus {
     border-bottom-color: #fff; } }
-.motto .container-fluid {
-  width: 100%;
-  background: #E8432F;
-  padding-right: 0px;
-  padding-left: 0px;
-  margin-right: auto;
-  margin-left: auto; }
-.motto img {
-  height: 200px;
-  width: 100%;
-  border-bottom: solid 1px #FB431F; }
+.motto {
+  position: relative; }
+  .motto .container-fluid {
+    width: 100%;
+    background: #E8432F;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto; }
+  .motto p {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    text-align: center; }
+  .motto img {
+    height: 200px;
+    width: 100%;
+    border-bottom: solid 1px #FB431F; }
 
 .map {
   padding-top: 0px; }

@@ -236,19 +236,21 @@
         <!-- 案例展示 Begin！-->
         <a name="demo"></a>
         <div class="tumi-demo">
-        <div class="container-fluid">
+            <div class="container-fluid">
                 <!--标签页的控制区块-->
                 <!-- Nav tabs -->
-                <ul class="nav nav-tabs-tumi" role="tablist">
-                    <!--
-                    a href 指明当前控制的是哪个内容容器 ID class
-                    data-toggle="tab" 必须声明
-                    -->
-                    <li role="presentation"  class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
-                </ul>
+                <div class="tumi_product_tabsParent">
+                    <ul class="nav nav-tabs-tumi" role="tablist">
+                        <!--
+                        a href 指明当前控制的是哪个内容容器 ID class
+                        data-toggle="tab" 必须声明
+                        -->
+                        <li role="presentation"  class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+                    </ul>
+                </div>
                 <!--标签页  的内容区块-->
                 <!-- Tab panes -->
                 <div class="tab-content">
@@ -610,12 +612,13 @@
                     </div>
                 </div>
         </div>
-    </div>
+        </div>
         <!-- 案例展示 End！-->
         <!-- 座右铭 Begin！-->
         <div class="motto">
             <div class="container-fluid">
                 <div class="container-fluid">
+                    <p>做自己喜欢的事，不会太累，前端对我而言是工作更是生活。</p>
                     <img class="hidden-xs hidden-sm" src="./images/fans.jpg" alt=""/>
                 </div>
                 <div class="container-fluid">
@@ -749,22 +752,22 @@
                             <!-- 输入框组-->
                             <div class="input-group">
                                 <span class="input-group-addon" id="basic-addon1">name</span>
-                                <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                                <input type="text" id='name' class="form-control" placeholder="Username" aria-describedby="basic-addon1">
                             </div>
                             <div class="input-group">
                                 <span class="input-group-addon" id="basic-addon2">email</span>
-                                <input type="text" class="form-control" placeholder="email" aria-describedby="basic-addon1">
+                                <input type="text" id='email' class="form-control" placeholder="email" aria-describedby="basic-addon1">
                             </div>
                             <div class="input-group">
                                 <span class="input-group-addon" id="basic-addon3">message</span>
-                                <input type="text" class="form-control" placeholder="message" aria-describedby="basic-addon1">
+                                <input type="text" id='message' class="form-control" placeholder="message" aria-describedby="basic-addon1">
                             </div>
                             <div class="input-submit">
                                 <div class="icon">
                                     <i class="icon tumi-submit">&#xe610;</i>
                                 </div>
                                 <div class="body">
-                                    <a title="提交按钮" type="button" class="btn tumi-Blogin">Send messasge</a>
+                                    <a title="提交按钮" type="button" id="tumi_submit" class="btn tumi-Blogin">Send messasge</a>
                                 </div>
                             </div>
                         </div>
@@ -809,8 +812,9 @@
     <script src="lib/node_modules/jquery/dist/jquery.min.js"></script>
     <!--Bootstrap 核心js文件-->
     <script src="lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- 滑动组件-->
+    <script src="js/swipe.js"></script>
     <!-- 首页的js-->
-    <script src="./lib/node_modules/fullpage/build/fullpage.min.js"></script>
     <script src="js/index.js"></script>
     <!-- js E! -->
 </body>

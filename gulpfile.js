@@ -7,10 +7,10 @@ var concat = require('gulp-concat');
 var htmlmin = require('gulp-htmlmin');
 //var sass = require('gulp-sass');
 
-// 将lib文件夹移动到dist目录下
+// 将lib文件夹移动到tumi目录下
 gulp.task('lib',function(){
     gulp.src('./lib/**/*') //将lib文件夹里面的所有内容移动位置
-        .pipe(gulp.dest('./dist/lib'));//移动到
+        .pipe(gulp.dest('./tumi/lib'));//移动到
 });
 
 //当你改动html,css,js的时候 --> 合并,压缩我们的html,js,css --> browser-sync刷新浏览器
@@ -18,12 +18,12 @@ gulp.task('biuld',function(){
     //第一步先用gulp监视index.js,如果有改动就会执行js这个任务
     gulp.watch(['./js/index.js'],['js']);
 
-    //开启browserSyn,一旦dist里面html有改动，就会刷新浏览器
+    //开启browserSyn,一旦tumi里面html有改动，就会刷新浏览器
     browserSync({
         server:{
-            baseDir:'./dist/'
+            baseDir:'./tumi/'
         },
-        files:['./dist/index.html']
+        files:['./tumi/index.html']
     });
 });
 
@@ -55,7 +55,7 @@ gulp.task('js',function(){
         // .pipe(gulp.dest('./js'))//合并之后放到js文件夹里面
         .pipe(uglify())//压缩
         //.pipe(rename('jquery.min.js'))//会将jquery.js重命名为jquery-min.js
-        .pipe(gulp.dest('./dist/js'));
+        .pipe(gulp.dest('./tumi/js'));
 });
 
 //合并压缩移动css
@@ -64,7 +64,7 @@ gulp.task('css',function(){
         // .pipe(concat('all.css'))//合并是可选项
         .pipe(cssnano())//压缩
         // .pipe(rename('all.min.css'))//重命名是可选项
-        .pipe(gulp.dest('./dist/css'));
+        .pipe(gulp.dest('./tumi/css'));
 });
 
 //压缩移动html，一般不压缩html
@@ -77,7 +77,7 @@ gulp.task('html',function(){
 //移动html
 gulp.task('html-move',function(){
     gulp.src('./*.html') //将lib文件夹里面的所有内容移动位置
-        .pipe(gulp.dest('./dist'));//移动到
+        .pipe(gulp.dest('./tumi'));//移动到
 });
 
 //添加监视,自动化压缩
